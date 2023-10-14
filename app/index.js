@@ -6,7 +6,7 @@ const cellLength = 3;
 const cell = new Cell(false);
 const grid = new World(cell);
 
-grid.initWorld(cellLength);
+grid.initWorld(cellLength, false);
 
 console.log(grid);
 console.log(cell);
