@@ -27,3 +27,23 @@ describe("Given the method initWorld in the class World", () => {
     });
   });
 });
+
+describe("Given the method countNeighbours in the class World", () => {
+  describe("When it's called with 0 and 2", () => {
+    test("Then it should return 1", () => {
+      const length = 3;
+      const isAlive = false;
+      const neighbours = 1;
+
+      const board = new World();
+      board.initWorld(length, isAlive);
+      board.cell[0][0].reborn();
+      board.cell[1][2].reborn();
+      board.cell[2][0].reborn();
+
+      board.countNeighbours(0, 2);
+
+      expect(board.cell[0][2].neighbours).toBe(neighbours);
+    });
+  });
+});
