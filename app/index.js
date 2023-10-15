@@ -1,12 +1,13 @@
-import Cell from "./Cell/Cell.js";
 import World from "./World/World.js";
 
 const cellLength = 3;
 
-const cell = new Cell(false);
-const grid = new World(cell);
+const grid = new World();
 
 grid.initWorld(cellLength, false);
 
-console.log(grid);
-console.log(cell);
+grid.cell[1][1].reborn();
+grid.cell[2][0].reborn();
+grid.cell[2][1].reborn();
+
+grid.countNeighbours(1, 1);
