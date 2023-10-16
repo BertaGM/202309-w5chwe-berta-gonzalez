@@ -2,9 +2,8 @@ class Cell {
   isAlive;
   neighbours;
 
-  constructor(isAlive, neighbours) {
+  constructor(isAlive) {
     this.isAlive = isAlive;
-    this.neighbours = neighbours;
   }
 
   state() {
